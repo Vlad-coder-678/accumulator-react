@@ -1,0 +1,96 @@
+@keyframes fromBottom__toCenter {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fromCenter__toTop {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+}
+
+.button1__wrapper {
+  margin-top: 70px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  .button1 {
+    display: block;
+    padding: 0 15px;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    transition: border-color 0.3s ease;
+    .button1__hover__out {
+      z-index: 1;
+      display: inline-block;
+      animation: fromBottom__toCenter 0.3s ease 1 forwards;
+      .button1__hover__out__text {
+        font-size: 10px;
+        line-height: 50px;
+        letter-spacing: 2px;
+        color: #000;
+        animation: fromBottom__toCenter 0.5s ease 1 forwards;
+      }
+    }
+    .button1__hover {
+      position: absolute;
+      display: block;
+      left: 0;
+      top: 0;
+      border-left: 1px solid #000;
+      border-right: 1px solid #000;
+      width: 100%;
+      height: 100%;
+      background: #000;
+      z-index: 4;
+      animation: fromCenter__toTop 0.3s ease 1 forwards;
+      .button1__hover__text {
+        position: relative;
+        display: inline-block;
+        font-size: 10px;
+        line-height: 50px;
+        letter-spacing: 2px;
+        color: #fff;
+        animation: fromCenter__toTop 0.5s ease 1 forwards;
+      }
+    }
+    &:hover {
+      transition: border-color 0.3s ease;
+      border-left: 1px solid #000;
+      border-right: 1px solid #000;
+      border-top: 1px solid transparent;
+      border-bottom: 1px solid transparent;
+      .button1__hover__out {
+        animation: fromCenter__toTop 0.3s ease 1 forwards;
+        .button1__hover__out__text {
+          animation: fromCenter__toTop 0.5s ease 1 forwards;
+        }
+      }
+      .button1__hover {
+        animation: fromBottom__toCenter 0.3s ease 1 forwards;
+        .button1__hover__text {
+          animation: fromBottom__toCenter 0.5s ease 1 forwards;
+        }
+      }
+    }
+  }
+}

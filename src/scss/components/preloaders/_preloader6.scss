@@ -1,0 +1,68 @@
+@keyframes preloader6_animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+// @import "../../../assets/images/energy.jpg";
+
+.preloader6 {
+  background-color: #0c1b21;
+
+  svg {
+    width: 0;
+    height: 0;
+  }
+
+  .preloader6__inner {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    // background: url("../../../assets/images/energy.jpg");
+
+    [class^="prel6__j"] {
+      // filter: url(#gooey);
+    }
+
+    [class^="prel6"] {
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: block;
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: calc(50% - 20px);
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        background: linear-gradient(45deg, #c7eeff, #03a9f4);
+        box-shadow: 0 0 30px #00bcd4;
+      }
+    }
+
+    $span_rotate: 8;
+    @for $i from 1 through $span_rotate {
+      .prel6__i#{$i} {
+        transform: rotate(calc(45deg * #{$i}));
+      }
+    }
+
+    $span_leak: 4;
+    @for $j from 0 through $span_leak {
+      .prel6__j#{$j} {
+        animation: preloader6_animate 4s infinite ease-in-out;
+        animation-delay: calc(-0.2s * #{$j});
+      }
+    }
+  }
+}

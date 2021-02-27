@@ -1,0 +1,181 @@
+%center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* -- header -- */
+
+.navApp {
+  @extend %center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  flex-wrap: wrap;
+  background: linear-gradient(
+    45deg,
+    rgba(51, 51, 51, 0.9),
+    rgba(0, 0, 0, 0.9),
+    rgba(51, 51, 51, 0.9)
+  );
+  z-index: 900;
+  a {
+    margin: 10px;
+    font-size: 18px;
+    line-height: 20px;
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+  }
+}
+@media (max-width: 760px) {
+  .navApp {
+    height: 70px;
+    a {
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
+}
+@media (max-width: 760px) {
+  .navApp {
+    height: 70px;
+    a {
+      font-size: 12px;
+      line-height: 13px;
+    }
+  }
+}
+
+/* -- pages -- */
+
+.page {
+  @extend %center;
+  flex-wrap: wrap;
+  background: linear-gradient(
+    45deg,
+    rgba(51, 51, 51, 0.2),
+    rgba(0, 0, 0, 0.6) 20%,
+    rgba(0, 0, 0, 0.6) 80%,
+    rgba(51, 51, 51, 0.2)
+  );
+  min-height: 100vh;
+}
+
+/* -- home page -- */
+
+.home__page {
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  h1 {
+    display: block;
+    color: #fff;
+    font-size: 100px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-family: cursive;
+    margin: 50px auto;
+  }
+  .background__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150%;
+    height: 150%;
+    z-index: -10;
+    transform: translate(-10%, -15%);
+  }
+}
+@media (max-width: 920px) {
+  .home__page {
+    h1 {
+      font-size: 70px;
+      letter-spacing: 1.5px;
+      margin: 50px auto 20px;
+    }
+    .accum__image {
+      width: auto;
+      height: 250px;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .home__page {
+    h1 {
+      font-size: 45px;
+      letter-spacing: 1px;
+      margin: 70px auto 20px;
+    }
+    .accum__image {
+      width: auto;
+      height: 180px;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .home__page {
+    h1 {
+      font-size: 30px;
+      letter-spacing: 0.7px;
+      margin: 70px auto 10px;
+    }
+    .accum__image {
+      width: auto;
+      height: 150px;
+    }
+  }
+}
+
+/* -- backgrounds -- */
+
+.bg {
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+}
+
+/* -- hovers -- */
+
+.hover__border {
+  @extend %center;
+  width: 100%;
+  height: 400px;
+  margin: 10px;
+  overflow: hidden;
+}
+
+/* -- buttons -- */
+
+.button__container {
+  @extend %center;
+  width: 100%;
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* -- menu burger -- */
+
+/* -- preloaders -- */
+
+.preloader {
+  width: 500px;
+  height: 250px;
+  @extend %center;
+  position: relative;
+  overflow: hidden;
+  margin: 20px;
+  background-color: #222;
+}
+
+/* -- sliders -- */
+
+.slider__wrapper {
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+}

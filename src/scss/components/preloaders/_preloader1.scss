@@ -1,0 +1,30 @@
+@keyframes loading {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.preloader1 {
+  h1 {
+    font-family: sans-serif;
+    position: relative;
+    font-size: 50px;
+    color: #212121;
+    letter-spacing: 1px;
+    text-decoration: uppercase;
+    border-bottom: 2px solid #212121;
+    &:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: "Loading...";
+      color: #00ffff;
+      border-bottom: 2px solid #00ffff;
+      overflow: hidden;
+      animation: loading 8s infinite linear;
+    }
+  }
+}

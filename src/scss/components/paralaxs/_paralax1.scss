@@ -1,0 +1,70 @@
+%center {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.paralax1 {
+  overflow: hidden;
+  height: 100vh;
+
+  .paralax1__wrapper {
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 100%;
+    perspective: 0.25px;
+    transform-style: preserve-3d;
+
+    .firstSection {
+      position: relative;
+      @extend %center;
+      box-sizing: border-box;
+      min-height: 100vh;
+      min-width: 100vw;
+      overflow: hidden;
+      flex-direction: column;
+      padding: 0 50px;
+      transform-style: inherit;
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        min-height: 100vh;
+        background-image: url(http://i.stack.imgur.com/vhoa0.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        transition: 1s linear;
+        transform: translateZ(-0.7px) scale(4);
+        z-index: -1;
+      }
+
+      h1 {
+        font-family: cursive;
+        color: #fff;
+        font-size: 90px;
+        letter-spacing: 5px;
+        text-shadow: 5px 5px 10px #000;
+        margin-top: 0px;
+      }
+
+      p {
+        color: #fff;
+        font-size: 20px;
+        letter-spacing: 1px;
+        max-width: 60%;
+      }
+    }
+  }
+  .secondSection {
+    padding: 50px;
+    background-color: #f1f1f1;
+    margin: 0;
+    margin-bottom: 150px;
+    font-size: 20px;
+  }
+}
