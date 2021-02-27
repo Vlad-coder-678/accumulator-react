@@ -2,7 +2,7 @@
   "name": "accumulator-react-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://vlad-coder-678.github.io/accumulator-react/",
+  "homepage": "https://github.com/Vlad-coder-678/accumulator-react",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
@@ -17,7 +17,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "deploy": "react-scripts test",
+    "deploy": "gh-pages -d build",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
